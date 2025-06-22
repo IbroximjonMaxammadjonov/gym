@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface TrainerRepository extends MongoRepository<Trainer, String> {
 
     Optional<Trainer> findByUsername(String username);
+
+    Optional<Trainer> updateByUsername(String username, Trainer trainer);
 }
