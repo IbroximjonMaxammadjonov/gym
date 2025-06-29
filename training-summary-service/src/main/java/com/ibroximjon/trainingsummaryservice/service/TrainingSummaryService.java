@@ -38,7 +38,7 @@ public class TrainingSummaryService {
             month.setTrainingDurationSummary(Math.max(0, month.getTrainingDurationSummary() - request.getTrainingDuration()));
         }
 
-        repository.save(trainer.getTrainerUsername(), trainer);
+        repository.save(trainer);
     }
 
     public TrainerSummary getTrainerSummary(String username) {

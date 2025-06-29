@@ -12,11 +12,17 @@ public class InMemoryTrainerSummaryRepository {
         return data.computeIfAbsent(username, k -> new TrainerSummary());
     }
 
-    public void save(String username, TrainerSummary summary) {
+    public void save(TrainerSummary summary) {
         data.put(username, summary);
     }
 
     public Optional<TrainerSummary> find(String username) {
         return Optional.ofNullable(data.get(username));
+    }
+
+    public void deleteByTrainerUsername(String username) {
+    }
+
+    public Optional<Object> findByTrainerUsername(String username) {
     }
 }
